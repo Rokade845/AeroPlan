@@ -7,6 +7,6 @@ export const connectDB = async () => {
     console.log('MongoDB Connected successfully.');
   } catch (error) {
     console.error('Error connecting to MongoDB:', error);
-    process.exit(1);
+    // Do not call process.exit(1) so the Express server stays alive
   }
 };
